@@ -1,0 +1,30 @@
+
+name: owasp-a03-lab
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: owasp-a03-springboot:local
+
+    init: true
+    restart: "no"
+
+    network_mode: "none"
+
+    read_only: true
+
+    tmpfs:
+      - /tmp:rw,nosuid,noexec,size=64m,mode=1777
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
+
+    pids_limit: 128
+    mem_limit: 768m
+    cpus: 1.0
