@@ -25,7 +25,7 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
 	// Dependencia con vulnerabilidad
-	compileOnly("org.apache.logging.log4j:log4j-core:2.14.1")
+	compileOnly("org.apache.logging.log4j:log4j-core:2.26.1")
 	// Dependencia con vulnerabilidad parcheada
 	//compileOnly("org.apache.logging.log4j:log4j-core:2.25.5")
 }
